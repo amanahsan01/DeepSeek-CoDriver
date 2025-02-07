@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# VSCode
+.vscode/
+.vscode-test.mjs
+.vscodeignore
+
+# Build/Output directories
+out/
+
+# Local development files
+*.local
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Environment variables
+.env
+.env.local
+
+# IDE-specific files (if applicable)
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
