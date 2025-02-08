@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 				try {
 					const streamResponse = await ollama.chat({
-						model: 'deepseek-r1:latest',
+						model: 'deepseek-r1:1.5b',
 						messages: [{ role: 'user', content: userPrompt}],
 						stream: true
 					})
@@ -35,7 +35,7 @@ export function activate(context: vscode.ExtensionContext) {
 						panel.webview.postMessage({ command: 'chatResponse', text: responseText })
 					}
 				} catch (err) {
-					panel.webview.postMessage({ command: 'chatResponse', text: `Error`})
+					panel.webview.postMessage({ command: 'chatResponse', text: `Error: ${String(err)}`})
 				}
 			}
 		})
@@ -53,7 +53,7 @@ function getWebviewContent(): string {
 			<style>
 				body { font-family: sans-serif; margin: 1rem; }
 				#prompt { width: 100%; box-sizing: border-box; }
-				#response { border: 1px solid #ccc; margin-top: 1rem; padding: 0.5rem; min-height: 100px}
+				#response { border: 1px solid #ccc; margin-top: 1rem; padding: 0.5rem; min-height: 1rem}
 			</style>
 		</head>
 		<body>
