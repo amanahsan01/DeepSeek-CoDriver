@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "codriver-ext.helloWorld",
-        "title": "Hello World"
+        "command": "codriver-ext.start",
+        "title": "DeepSeek CoDriver"
       }
     ]
   },

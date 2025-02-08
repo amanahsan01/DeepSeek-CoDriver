@@ -4,6 +4,7 @@ package-lock.json
 
 # VSCode
 .vscode/
+.vscode-test/
 .vscode-test.mjs
 .vscodeignore
 
